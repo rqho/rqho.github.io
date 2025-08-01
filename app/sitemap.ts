@@ -1,5 +1,7 @@
 import { getBlogPosts } from './blog/utils'
 
+export const dynamic = 'force-static'
+
 export const baseUrl = 'https://rqho.github.io'
 
 export default async function sitemap() {

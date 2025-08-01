@@ -6,7 +6,7 @@ import React from 'react'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 
-function Table({ data }) {
+function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   let headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ))
@@ -28,34 +28,32 @@ function Table({ data }) {
   )
 }
 
-function CustomLink(props) {
-  let href = props.href
-
+function CustomLink({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: any }) {
   if (href.startsWith('/')) {
     return (
       <Link href={href} {...props}>
-        {props.children}
+        {children}
       </Link>
     )
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />
+    return <a href={href} {...props}>{children}</a>
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return <a href={href} target="_blank" rel="noopener noreferrer" {...props}>{children}</a>
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+function RoundedImage({ alt, src, ...props }: { alt: string; src: string; [key: string]: any }) {
+  return <Image alt={alt} src={src} className="rounded-lg" {...props} />
 }
 
-function Code({ children, ...props }) {
-  let codeHTML = highlight(children)
+function Code({ children, ...props }: { children: React.ReactNode }) {
+  let codeHTML = highlight(children as string)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function slugify(str) {
+function slugify(str: string) {
   return str
     .toString()
     .toLowerCase()
@@ -66,9 +64,9 @@ function slugify(str) {
     .replace(/\-\-+/g, '-') // Replace multiple - with single -
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
-    let slug = slugify(children)
+function createHeading(level: number) {
+  const Heading = ({ children }: { children: React.ReactNode }) => {
+    let slug = slugify(children as string)
     return React.createElement(
       `h${level}`,
       { id: slug },
@@ -101,7 +99,7 @@ let components = {
   Table,
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: { source: string; components?: any }) {
   return (
     <MDXRemote
       {...props}

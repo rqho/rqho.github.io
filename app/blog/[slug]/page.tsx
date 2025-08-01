@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   let post = getBlogPosts().find((post) => post.slug === slug)
   if (!post) {
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   } = post.metadata
   let ogImage = image
     ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+    : `${baseUrl}/og`
 
   return {
     title,
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function Blog({ params }: { params: { slug: string } }) {
+export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   let post = getBlogPosts().find((post) => post.slug === slug)
 
@@ -75,7 +75,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+              : `${baseUrl}/og`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
