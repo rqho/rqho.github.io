@@ -2,7 +2,7 @@
 
 @layer base {
   .font-mono {
-    font-family: var(--font-space-mono), ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    font-family: var(--font-space-mono), monospace;
   }
 
   /* KaTeX dark theme styling */

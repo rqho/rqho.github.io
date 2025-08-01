@@ -48,10 +48,10 @@ function ProjectCard({ project }: { project: any }) {
           {/* Header */}
           <div className="flex items-start justify-between mb-3">
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-neutral-100 group-hover:text-white transition-colors">
+              <h3 className="text-sm font-semibold text-neutral-100 group-hover:text-white transition-colors">
                 {metadata.title}
               </h3>
-              <p className="text-sm text-neutral-400 mt-1">
+              <p className="text-xs text-neutral-400 mt-1">
                 {formatDate(metadata.publishedAt)}
               </p>
             </div>
@@ -63,7 +63,7 @@ function ProjectCard({ project }: { project: any }) {
           </div>
 
           {/* Summary */}
-          <p className="text-neutral-300 text-sm mb-4 flex-grow leading-relaxed">
+          <p className="text-neutral-300 text-xs mb-4 flex-grow leading-relaxed">
             {metadata.summary}
           </p>
 

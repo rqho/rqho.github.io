@@ -97,9 +97,10 @@ let components = {
   a: CustomLink,
   code: Code,
   Table,
-  ol: (props: any) => <ol className="list-decimal list-outside space-y-2 pl-6 ml-2" {...props} />,
-  ul: (props: any) => <ul className="list-disc list-outside space-y-2 pl-6" {...props} />,
-  li: (props: any) => <li className="leading-relaxed" {...props} />,
+  ol: (props: any) => <ol className="list-decimal list-outside space-y-2 pl-6 ml-2 text-sm" {...props} />,
+  ul: (props: any) => <ul className="list-disc list-outside space-y-2 pl-6 text-sm" {...props} />,
+  li: (props: any) => <li className="leading-relaxed text-sm" {...props} />,
+  p: (props: any) => <p className="text-sm leading-relaxed mb-4" {...props} />,
 }
 
 export function CustomMDX(props: { source: string; components?: any }) {
