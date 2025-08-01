@@ -8,25 +8,7 @@
           <title>LaTeX Math Support with KaTeX</title>
           <link>https://rqho.github.io/blog/latex-math-test</link>
           <description>Testing LaTeX math rendering in blog posts using KaTeX for beautiful mathematical expressions.</description>
-          <pubDate>Tue, 31 Dec 2024 00:00:00 GMT</pubDate>
-        </item>
-<item>
-          <title>Spaces vs. Tabs: The Indentation Debate Continues</title>
-          <link>https://rqho.github.io/blog/spaces-vs-tabs</link>
-          <description>Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think.</description>
-          <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
-        </item>
-<item>
-          <title>Embracing Vim: The Unsung Hero of Code Editors</title>
-          <link>https://rqho.github.io/blog/vim</link>
-          <description>Discover why Vim, with its steep learning curve, remains a beloved tool among developers for editing code efficiently and effectively.</description>
-          <pubDate>Tue, 09 Apr 2024 00:00:00 GMT</pubDate>
-        </item>
-<item>
-          <title>The Power of Static Typing in Programming</title>
-          <link>https://rqho.github.io/blog/static-typing</link>
-          <description>In the ever-evolving landscape of software development, the debate between dynamic and static typing continues to be a hot topic.</description>
-          <pubDate>Sun, 07 Apr 2024 00:00:00 GMT</pubDate>
+          <pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate>
         </item>
     </channel>
   </rss>
