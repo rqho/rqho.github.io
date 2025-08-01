@@ -7,7 +7,7 @@ export default function Page() {
         Hi. I'm Richard.
       </h1>
       <p className="mb-4">
-        {`I'm studying Electrical Engineering and Computer Science the University of Michigan. I'm interested in how computer architecture and microwave engineering can be used to advance quantum computing, and how quantum computing can be applied to machine learning.`}
+        {`I'm studying Electrical Engineering and Computer Science the University of Michigan with interests in quantum computing, computer architecture, and microwave/RF engineering.`}
       </p>
       <p className="mb-4">
         {`I'm currently a researcher at the Intelligent Robotics and Autonomy Lab, where I'm working on simulations of collaborative multi-robot systems. I'm also an avionics engineer for the Michigan Aeronautical Science Association and a member of the Quantum Computing Club.`}
