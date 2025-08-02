@@ -1,6 +1,7 @@
 import './global.css'
 import type { Metadata } from 'next'
 import { Space_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -13,11 +14,17 @@ const spaceMono = Space_Mono({
   variable: '--font-space-mono',
 })
 
+const codeSaver = localFont({
+  src: './CodeSaver-Regular.otf',
+  variable: '--font-codesaver',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
     default: 'Richard Ho',
-    template: '%s | Next.js Portfolio Starter',
+    template: '%s | Richard Ho',
   },
   description: 'Richard Ho\'s website.',
   openGraph: {
@@ -56,10 +63,11 @@ export default function RootLayout({
       lang="en"
       className={cx(
         'text-white bg-[rgb(16,16,16)]',
-        spaceMono.variable
+        spaceMono.variable,
+        codeSaver.variable
       )}
     >
-      <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto font-mono">
+      <body className="antialiased max-w-2xl mx-4 mt-8 lg:mx-auto font-codesaver">
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"

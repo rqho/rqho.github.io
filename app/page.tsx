@@ -13,7 +13,7 @@ export default function Page() {
         {`I'm currently a researcher at the Intelligent Robotics and Autonomy Lab, where I'm working on simulations of collaborative multi-robot systems. I'm also an avionics engineer for the Michigan Aeronautical Science Association and a member of the Quantum Computing Club.`}
       </p>
       <p className="mb-4">
-        {`I was born in NYC and currently residing in the Brainy Borough of Metuchen, New Jersey.`}
+        {`I was born in NYC and I currently reside in the Brainy Borough of Metuchen, New Jersey.`}
       </p>
 
       <div className="my-8">
