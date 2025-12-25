@@ -94,7 +94,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/rqho',
-  }
+  },
+  {
+    label: 'Resume',
+    link: '/RichardHoResume.pdf',
+  },
 ]
 
 export const EMAIL = 'rqho@umich.edu'

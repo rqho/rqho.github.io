@@ -1,7 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
-import { XIcon, Github, Linkedin } from 'lucide-react'
+import { XIcon, Github, Linkedin, FileText } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -122,6 +122,7 @@ const SOCIAL_ICONS: Record<string, React.ReactNode> = {
     </svg>
   ),
   LinkedIn: <Linkedin className="h-3.5 w-3.5" fill="currentColor" />,
+  Resume: <FileText className="h-3.5 w-3.5" />,
 }
 
 function MagneticSocialLink({
